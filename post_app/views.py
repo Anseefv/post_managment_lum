@@ -30,7 +30,7 @@ class PostApiView(ModelViewSet):
 
 class CommentApiView(ModelViewSet):
 
-    permission_classes=[PostPermission,IsAuthenticated]
+    permission_classes=[CommentPermission,IsAuthenticated]
     authentication_classes=[TokenAuthentication]
     serializer_class=CommentSerializer
 
