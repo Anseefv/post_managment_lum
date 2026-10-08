@@ -24,7 +24,9 @@ urlpatterns = [
         'patch': 'partial_update',
         'delete': 'destroy'
         }
-    ))
+    )),
+
+    path('login/post/<int:id>/like/',LikesApiView.as_view())
     
     
 

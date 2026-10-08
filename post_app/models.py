@@ -24,4 +24,16 @@ class Comments(models.Model):
     post=models.ForeignKey(Post,on_delete=models.CASCADE,related_name="comment")
 
 
+class likes(models.Model):
+
+    post=models.ForeignKey(Post,on_delete=models.CASCADE,related_name="likes")
+    owner=models.ForeignKey(User,on_delete=models.CASCADE)
+    created_at=models.DateTimeField(auto_now=True)
+
+    class Meta:
+
+        unique_together = ('post', 'owner')
+
+
+
 

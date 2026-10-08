@@ -44,3 +44,12 @@ class PostSerializer(serializers.ModelSerializer):
         fields='__all__'
         read_only_fields=['owner','created_at']
 
+
+class LikeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model=likes
+        fields='__all__'
+        read_only_fields=['owner','created_at','post']
+        
+
